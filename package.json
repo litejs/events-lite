@@ -1,0 +1,36 @@
+{
+  "name": "events-lite",
+  "version": "0.1.0",
+  "stability": 2,
+  "author": "Lauri Rooden <lauri@rooden.ee>",
+  "license": "MIT",
+  "description": "Event Emitter for browser and node",
+  "keywords": [
+    "browser",
+    "event",
+    "emitter",
+    "events",
+    "litejs"
+  ],
+  "main": "index.js",
+  "readmeFilename": "README.md",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "build": "node node_modules/buildman/index.js --all",
+    "travis-test": "istanbul cover ./tests/run.js && (coveralls < coverage/lcov.info || exit 0)",
+    "test": "node tests/run.js"
+  },
+  "repository": "git://github.com/litejs/events-lite.git",
+  "bugs": {
+    "url": "https://github.com/litejs/events-lite/issues"
+  },
+  "devDependencies": {
+    "buildman": "*",
+    "testman": "*"
+  },
+  "buildman": {
+    "dist/index-min.js": "index.js"
+  }
+}
